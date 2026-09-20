@@ -66,11 +66,12 @@ setLanguage(localStorage.getItem('language') || 'en');
 languageSelect.addEventListener('change', (event) => setLanguage(event.target.value)); btn.addEventListener('click', startRecording); recordAnother.addEventListener('click', startRecording);
 
 window.addEventListener('beforeinstallprompt', (event) => {
-  event.preventDefault(); installPrompt = event; installApp.hidden = false;
+  event.preventDefault(); installPrompt = event;
+  if (installApp) installApp.hidden = false;
 });
-installApp.addEventListener('click', async () => {
+installApp?.addEventListener('click', async () => {
   if (!installPrompt) return;
   installPrompt.prompt(); await installPrompt.userChoice; installPrompt = undefined; installApp.hidden = true;
 });
-window.addEventListener('appinstalled', () => { installPrompt = undefined; installApp.hidden = true; });
+window.addEventListener('appinstalled', () => { installPrompt = undefined; if (installApp) installApp.hidden = true; });
 if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js'));

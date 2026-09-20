@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>360 Video App</title>
+    <meta name="theme-color" content="#20d4f4" />
+    <meta name="description" content="Record, share, and download 360 booth videos." />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.svg" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -59,6 +64,8 @@
       <h1 data-i18n="takeVideo">Click here to take your video</h1>
       <button class="capture" id="openCamera" data-i18n="openCamera">Open Camera</button>
     </section>
+
+    <button id="installApp" class="install-app" hidden>Install app</button>
 
     <section id="qrResult" class="qr-result" hidden aria-live="polite">
       <h2 data-i18n="videoReady">Your video is ready</h2>
