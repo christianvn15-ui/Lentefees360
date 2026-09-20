@@ -27,6 +27,11 @@
       style="display: none"
     />
 
+    <section class="recording-panel" aria-live="polite">
+      <video id="cameraPreview" class="camera-preview" autoplay muted playsinline hidden></video>
+      <p id="recordingStatus" class="recording-status"></p>
+    </section>
+
     <section class="section1">
       <h4 data-i18n="instructionsHeading">Follow the instructions below for recording your 360-degree video:</h4>
       <br>
@@ -34,7 +39,7 @@
         <li data-i18n="step2"><b>2. </b>Allow access to your camera when prompted.</li>
         <li data-i18n="step3"><b>3. </b>Position yourself in the environment you want to record.</li>
         <li data-i18n="step4"><b>4. </b>Press the record button to start recording.</li>
-        <li data-i18n="step5"><b>5. </b>The video will record for 20 seconds.</li>
+        <li data-i18n="step5"><b>5. </b>The video will record for 25 seconds.</li>
         <li data-i18n="step6"><b>6. </b>After recording, the app will display a QR code.</li>
         <li data-i18n="step7"><b>7. </b>Scan the QR code with your phone to view the video.</li>
         <li data-i18n="step8"><b>8. </b>Download the video.</li>
@@ -55,6 +60,14 @@
       <button class="capture" id="openCamera" data-i18n="openCamera">Open Camera</button>
     </section>
 
-    <script src="script.js" defer></script>
+    <section id="qrResult" class="qr-result" hidden aria-live="polite">
+      <h2 data-i18n="videoReady">Your video is ready</h2>
+      <p data-i18n="scanQr">Scan this QR code to watch and download your video.</p>
+      <div id="qrCode" class="qr-code"></div>
+      <a id="videoLink" class="video-link" target="_blank" rel="noopener" data-i18n="openVideo">Open video</a>
+      <button id="recordAnother" class="secondary-button" data-i18n="recordAnother">Record another video</button>
+    </section>
+
+    <script type="module" src="script.js"></script>
   </body>
 </html>

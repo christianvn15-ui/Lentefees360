@@ -1,0 +1,20 @@
+{
+  "id": "/",
+  "name": "360 Video Booth",
+  "short_name": "360 Booth",
+  "description": "Record, share, and download 360 booth videos.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#20d4f4",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -4,8 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>360Vid | QR Code</title>
+  <meta name="theme-color" content="#20d4f4">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <main class="video-page">
+    <h1>360 Video</h1>
+    <p id="videoMessage">Loading your video…</p>
+    <video id="recordedVideo" controls playsinline></video>
+    <a id="downloadVideo" class="video-link" download>Download video</a>
+  </main>
+  <script type="module" src="qr.js"></script>
 </body>
 </html>
